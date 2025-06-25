@@ -1,77 +1,20 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Квиток</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background-color: #fff;
-            color: #000;
-        }
-        .container {
-            background: #f9f9f9;
-            border-radius: 16px;
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-        .logo {
-            width: 60px;
-            margin: 10px auto;
-        }
-        .ticket-status {
-            background: #e0e0e0;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-        .qr {
-            margin: 20px auto;
-            width: 200px;
-        }
-        .number {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .footer {
-            font-size: 13px;
-            color: #777;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <title>pivo</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Логотип, подключён как внешний файл в той же папке -->
-        <img src="logo.png" class="logo" alt="Логотип">
-
-        <h2>Миколаївелектротранс Тролейбус</h2>
-        <p>Придбано 26 березня о 14:20</p>
-
-        <h1>1 квиток</h1>
-
-        <!-- Статус билета -->
-        <div class="ticket-status">Квиток недійсний</div>
-
-        <!-- QR-код, также подключён как внешний файл -->
-        <div>
-            <img src="qr-code.png" alt="QR" class="qr">
+    <div class="wrapper">
+        <div class="ticket">
+          <div class="top-circle"></div> <!-- Вырез сверху -->
+          <div class="content top"></div>
+          <div class="middle-cutout"></div> <!-- Пунктирная линия -->
+          <div class="content bottom"></div>
+          <div class="bottom-wave"></div> <!-- Волнистый низ -->
         </div>
-
-        <!-- Номер билета -->
-        <div class="number">Номер: <strong>190 253</strong></div>
-    </div>
-
-    <!-- Подвал страницы с инструкцией -->
-    <div class="footer">
-        Ви зможете повторно відкрити цю сторінку через історію браузера
-    </div>
+      </div>
 </body>
 </html>
