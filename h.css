@@ -1,49 +1,96 @@
-body {
+/* Сброс стилей и базовая настройка */
+* {
     margin: 0;
-    font-family: sans-serif;
-    background-color: #fff;
-    color: #000;
-}
-.header {
-    background-color: #2c1f0c;
-    color: white;
-    padding: 5px 15px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Серый фон страницы */
+  body, html {
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  /* Обёртка для центрирования билета */
+  .wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 16px;
-}
-.container {
-    background: #f9f9f9;
-    border-radius: 16px;
-    margin: 20px;
+    height: 100%;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-.logo {
-    width: 60px;
-    margin: 10px auto;
-}
-.ticket-status {
-    background: #e0e0e0;
-    display: inline-block;
-    padding: 5px 15px;
+  }
+  
+  /* Сам билет */
+  .ticket {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 380px;
+    height: 90%;
     border-radius: 20px;
-    font-size: 14px;
-    color: #555;
-}
-.qr {
-    margin: 20px auto;
-    width: 200px;
-}
-.number {
-    font-size: 16px;
-    margin: 10px 0;
-}
-.footer {
-    font-size: 13px;
-    color: #777;
-    text-align: center;
-    padding: 10px;
-}
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Вырез сверху (под логотип) */
+  .top-circle {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  /* Верхняя и нижняя часть */
+  .content {
+    height: 50%;
+    padding: 20px;
+  }
+  
+  /* Пунктирная линия с круглыми вырезами слева и справа */
+  .middle-cutout {
+    position: relative;
+    height: 20px;
+    border-top: 2px dashed #ccc;
+    margin: 0 20px;
+  }
+  
+  .middle-cutout::before,
+  .middle-cutout::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+  }
+  
+  .middle-cutout::before {
+    left: -20px;
+  }
+  
+  .middle-cutout::after {
+    right: -20px;
+  }
+  
+  /* Волнистый нижний край */
+  .bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background: radial-gradient(circle at 10% 0, #f5f5f5 14px, white 15px),
+                radial-gradient(circle at 30% 0, #f5f5f5 14px, white 15px),
+                radial-gradient(circle at 50% 0, #f5f5f5 14px, white 15px),
+                radial-gradient(circle at 70% 0, #f5f5f5 14px, white 15px),
+                radial-gradient(circle at 90% 0, #f5f5f5 14px, white 15px);
+    background-repeat: repeat-x;
+    background-size: 20% 100%;
+  }
+  
