@@ -1,23 +1,15 @@
 /* Сброс стилей и базовая настройка */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
   /* Серый фон страницы */
   body, html {
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
   }
   
   /* Обёртка для центрирования билета */
   .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     padding: 20px;
+    margin-top: 70px;
   }
   
   /* Сам билет */
@@ -25,72 +17,73 @@
     position: relative;
     background-color: white;
     width: 100%;
-    max-width: 380px;
     height: 90%;
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+
   }
   
-  /* Вырез сверху (под логотип) */
+  /* Вырез сверху  */
   .top-circle {
     position: absolute;
-    top: -25px;
+    top: -70px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: #f5f5f5;
+    width: 100px;
+    height: 100px;
+    background-color: #f4f4f4;
     border-radius: 50%;
-    z-index: 2;
+    
   }
-  
-  /* Верхняя и нижняя часть */
-  .content {
-    height: 50%;
-    padding: 20px;
-  }
-  
-  /* Пунктирная линия с круглыми вырезами слева и справа */
-  .middle-cutout {
-    position: relative;
-    height: 20px;
-    border-top: 2px dashed #ccc;
-    margin: 0 20px;
-  }
-  
-  .middle-cutout::before,
-  .middle-cutout::after {
-    content: '';
+ /*  (под логотип) */
+  .top-circle2 {
     position: absolute;
-    top: -10px;
-    width: 20px;
-    height: 20px;
-    background-color: #f5f5f5;
+    top: -57px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
     border-radius: 50%;
+    
   }
   
-  .middle-cutout::before {
-    left: -20px;
-  }
-  
-  .middle-cutout::after {
-    right: -20px;
-  }
-  
+    .middle-cutout {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 2px;
+    }
+    .circle {
+      position: absolute;
+      bottom: 53%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #f4f4f4;
+      border-radius: 50%;
+    }
+
+    .circle2 {
+      position: absolute;
+      bottom: 53%;
+      left: 100%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #f4f4f4;
+      border-radius: 50%;
+    }
+
   /* Волнистый нижний край */
   .bottom-wave {
     position: absolute;
     bottom: 0;
-    left: 0;
-    height: 30px;
     width: 100%;
-    background: radial-gradient(circle at 10% 0, #f5f5f5 14px, white 15px),
-                radial-gradient(circle at 30% 0, #f5f5f5 14px, white 15px),
-                radial-gradient(circle at 50% 0, #f5f5f5 14px, white 15px),
-                radial-gradient(circle at 70% 0, #f5f5f5 14px, white 15px),
-                radial-gradient(circle at 90% 0, #f5f5f5 14px, white 15px);
+    height: 20px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDgwIDIwIj48cGF0aCBkPSJN MCAyMCBRIDQwIDAgODAgMjAgVjIwIEgwIFoiIGZpbGw9IiNmNGY0ZjQiLz48L3N2Zz4=");
     background-repeat: repeat-x;
-    background-size: 20% 100%;
+    background-size: auto 100%;
   }
-  
