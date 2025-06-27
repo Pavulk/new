@@ -9,9 +9,16 @@
 <body>
     <div class="wrapper">
         <div class="ticket">
-          <div class="top-circle"></div> <!-- Вырез сверху -->
+          <div class="top-circle"></div>
+          <div class="top-circle2"></div><!-- Вырез сверху -->
           <div class="content top"></div>
-          <div class="middle-cutout"></div> <!-- Пунктирная линия -->
+
+          <svg class="middle-cutout" viewBox="0 0 100 1" preserveAspectRatio="none">
+            <line x1="0" y1="0.5" x2="100" y2="0.5" stroke="#aaa" stroke-width="0.5" 
+            stroke-dasharray="2 2"/>
+          </svg>                          <!-- Пунктирная линия -->
+          <div class="circle"></div>
+          <div class="circle2"></div>
           <div class="content bottom"></div>
           <div class="bottom-wave"></div> <!-- Волнистый низ -->
         </div>
